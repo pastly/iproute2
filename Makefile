@@ -52,7 +52,10 @@ CCOPTS = -O2
 WFLAGS := -Wall -Wstrict-prototypes  -Wmissing-prototypes
 WFLAGS += -Wmissing-declarations -Wold-style-definition -Wformat=2
 
-CFLAGS := $(WFLAGS) $(CCOPTS) -I../include -I../include/uapi $(DEFINES) $(CFLAGS)
+CCINCS := -I../include/compat/kernel -I../include/compat/libc
+CCINCS += -I../include -I../include/uapi
+
+CFLAGS := $(WFLAGS) $(CCOPTS) $(CCINCS) $(DEFINES) $(CFLAGS)
 YACCFLAGS = -d -t -v
 
 SUBDIRS=lib ip tc bridge misc netem genl tipc devlink rdma man
