@@ -24,6 +24,7 @@
 #include "utils.h"
 #include "tc_util.h"
 
+#define CLOCK_BOOTTIME 7
 #define CLOCKID_INVALID (-1)
 static const struct static_clockid {
 	const char *name;
