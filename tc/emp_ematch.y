@@ -8,8 +8,8 @@
 
 %locations
 %token-table
-%define parse.error verbose
-%define api.prefix {ematch_}
+%error-verbose
+%name-prefix "ematch_"
 
 %union {
 	unsigned int i;
